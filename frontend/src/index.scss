@@ -1,0 +1,109 @@
+@use "sass:math";
+
+// Підключення шрифтів ========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@400;500&display=swap');
+
+
+// Підключити, якщо є локальні файли шрифтів
+//@font-face {
+//  font-family: Century Gothic;
+//  font-display: swap;
+//  src: url("./assets/fonts/CenturyGothic.woff2") format("woff2"), url("./assets/fonts/CenturyGothic.woff") format("woff");
+//  font-weight: 400;
+//  font-style: normal;
+//}
+
+
+// За замовчуванням шрифт ===================================================================
+$fontFamily: Roboto;
+$fontSize: 16px; //  - розмір шрифту за замовчуванням з макету
+
+// Основні кольори
+$primaryColor: #539BDC;
+$secondaryColor: #fcb503;
+$lightSecondaryColor: #fedf00;
+
+$mainColor: #333333; // Колір шрифту за замовчуванням
+
+//$oliveColor: #9C946B;
+//$lightOliveColor: #E6E4DA;
+//$greenColor: #5D6B00;
+//$orangeColor: #F77E39;
+
+//Фільтри для SVG
+$blackFilter: invert(0%) sepia(100%) saturate(0%) hue-rotate(13deg) brightness(95%) contrast(105%);
+$whiteFilter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+$goldFilter: invert(88%) sepia(98%) saturate(6282%) hue-rotate(328deg) brightness(104%) contrast(98%);
+$redFilter: invert(46%) sepia(87%) saturate(3211%) hue-rotate(335deg) brightness(96%) contrast(97%);
+$yellowFilter: invert(82%) sepia(39%) saturate(5746%) hue-rotate(2deg) brightness(106%) contrast(98%);
+$lightYellowFilter: invert(90%) sepia(27%) saturate(6731%) hue-rotate(6deg) brightness(110%) contrast(106%);
+$grayFilter: invert(92%) sepia(3%) saturate(9%) hue-rotate(340deg) brightness(93%) contrast(98%);
+
+
+
+// Налаштування адаптивної сітки ========================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1410; //додаємо падінги
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer+$containerPadding;
+
+// Брейк-поїнти
+$pc: $containerWidth+px; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: 992px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767px; // Телефоны L
+$mobileSmall: 360px; // Телефоны S
+
+
+// Mixin ====================================================================================================
+@import "theme/mixin";
+
+// Обнулення ============================================================================
+@import "theme/null";
+
+
+// Основні стилі  =====================================================================
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* Mostly for vertical scrollbars */
+  height: 10px;
+  /* Mostly for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #9a9898;
+}
+
+::-webkit-scrollbar-track {
+  /* Background */
+  background: #e5e5e5;
+}
+
+body {
+  //min-height: 100vh;
+  min-height: 100%;
+  overflow-x: hidden;
+  //color: $mainColor;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+
+div#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //overflow-x: hidden;
+}

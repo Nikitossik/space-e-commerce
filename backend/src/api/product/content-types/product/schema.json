@@ -1,0 +1,182 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "oldPrice": {
+      "type": "biginteger"
+    },
+    "relevantPrice": {
+      "type": "biginteger",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "characteristic": {
+      "type": "richtext"
+    },
+    "imagesSlider": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": false
+    },
+    "outOfStock": {
+      "type": "boolean",
+      "default": false
+    },
+    "readyToShip": {
+      "type": "boolean",
+      "default": false
+    },
+    "labelNewProduct": {
+      "type": "boolean",
+      "default": false
+    },
+    "labelTopSeller": {
+      "type": "boolean",
+      "default": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "typeBattery": {
+      "type": "string"
+    },
+    "withTaoTao": {
+      "type": "boolean",
+      "default": false
+    },
+    "weRecommend": {
+      "type": "boolean",
+      "default": false
+    },
+    "inversedBy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "mappedBy"
+    },
+    "mappedBy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "inversedBy"
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "categoryName": {
+      "type": "enumeration",
+      "enum": [
+        "giroskuteri",
+        "girobordi",
+        "elektrovelosipedi",
+        "droni_kvadrokopteri",
+        "dityachi_samokati",
+        "generatori",
+        "akkumulyatori_tyagovi",
+        "invertori_peretvoryuvachi_naprugi",
+        "drift_karti",
+        "elektroskuteri",
+        "elektrosamokati"
+      ],
+      "required": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "maxLoad": {
+      "type": "enumeration",
+      "enum": [
+        "max 100",
+        "max 130",
+        "from 130 to 150",
+        "min 150"
+      ]
+    },
+    "maxMileage": {
+      "type": "enumeration",
+      "enum": [
+        "max 20",
+        "from 20 to 30",
+        "from 30 to 50",
+        "from 50 to 80"
+      ]
+    },
+    "maxSpeed": {
+      "type": "enumeration",
+      "enum": [
+        "max 20",
+        "from 20 to 40",
+        "from 40 to 80"
+      ]
+    },
+    "enginePower": {
+      "type": "enumeration",
+      "enum": [
+        "from 600 to 1000",
+        "from 1001 to 1500",
+        "from 1501 to 3000"
+      ]
+    },
+    "wheelSize": {
+      "type": "enumeration",
+      "enum": [
+        "inch 6.5",
+        "inch 8.5",
+        "inch 10",
+        "inch 10.5",
+        "inch 11-20"
+      ]
+    },
+    "forAdults": {
+      "type": "boolean",
+      "required": true
+    },
+    "forChildren": {
+      "type": "boolean",
+      "required": true
+    },
+    "hasSeat": {
+      "type": "boolean",
+      "default": false
+    },
+    "batteryType": {
+      "type": "enumeration",
+      "enum": [
+        "V36",
+        "V54"
+      ],
+      "default": "V36"
+    }
+  }
+}

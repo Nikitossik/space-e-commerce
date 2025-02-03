@@ -1,0 +1,21 @@
+@import './../../index.scss';
+
+.wrapper {
+  font-family: Segoe UI;
+  font-size: 14px;
+
+  grid-template-columns: 6fr 4fr;
+  align-items: start;
+  display: grid;
+  gap: 15px;
+  padding-top: 15px;
+  @media (max-width: 940px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.forms {
+
+}
+

@@ -1,0 +1,113 @@
+@import "./../../index.scss";
+
+.wrapperDesktop {
+  background-color: #F8F8F8;
+  padding: 0.5rem 0.25rem;
+}
+
+.menuButton {
+
+  margin: 0;
+
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  @media (max-width: 992px) {
+    flex: 0 1 50%;
+    padding: 12px 16px;
+  }
+
+
+  .filterCount {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: $secondaryColor;
+    color: #fff;
+    display: grid;
+    place-items: center;
+  }
+
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.resetFilterBtn {
+  margin-bottom: 1rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.sortButton {
+  width: 100%;
+  padding: 12px 16px;
+  height: auto;
+}
+
+.filterButton {
+  height: auto;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  padding-left: 0;
+
+  .filterButtonText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filterButtonStatus {
+    font-size: 12px;
+  }
+
+  .filterButtonStatus--active {
+    color: #980606;
+  }
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+
+.drawerSubtitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+  flex: 1 1 100%;
+}
+
+.divider {
+  margin: 6px 0;
+  border-width: 2px;
+  border-color: rgba(5, 5, 5, 0.1);
+}

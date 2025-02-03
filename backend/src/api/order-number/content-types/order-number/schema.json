@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_numbers",
+  "info": {
+    "singularName": "order-number",
+    "pluralName": "order-numbers",
+    "displayName": "orderNumber"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "biginteger"
+    }
+  }
+}

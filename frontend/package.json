@@ -1,0 +1,43 @@
+{
+  "name": "space",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": " vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.5",
+    "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.11.1",
+    "axios": "^1.6.0",
+    "crypto-js": "^4.2.0",
+    "formik": "^2.4.5",
+    "google-map-react": "^2.2.1",
+    "node-sass": "^9.0.0",
+    "qs": "^6.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
+    "react-responsive": "^9.0.2",
+    "react-router-dom": "^6.18.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.3",
+    "yup": "^1.3.2"
+  },
+  "devDependencies": {
+    "@types/css-modules": "^1.0.5",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.69.5",
+    "vite": "^4.4.5"
+  }
+}

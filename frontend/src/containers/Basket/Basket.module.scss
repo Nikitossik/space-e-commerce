@@ -1,0 +1,151 @@
+@import "./../../index.scss";
+
+
+.wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Segoe UI;
+  padding: 15px;
+  background-color: white;
+
+  //@media (max-width: 940px) {
+  //  grid-row: 1/2;
+  //}
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.products {
+  margin-bottom: 15px;
+}
+
+
+.resul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 54px;
+}
+
+.resulEnd {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 44px;
+  border-bottom: 1px solid black;
+}
+
+.resulTitle {
+  font-family: Century Gothic;
+  font-size: 16px;
+  line-height: 19px;
+
+}
+
+.resulSum {
+  font-family: Century Gothic;
+  font-weight: 700;
+  line-height: 19px;
+
+}
+
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 110px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.button {
+
+  //background-color: $oliveColor;
+  padding: 12px 58px;
+  font-family: Century Gothic;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  transition: all 0.3s ease 0s;
+
+  &:disabled {
+    background-color: #9C946B45;
+    color: rgba(0, 0, 0, 0.44);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #9C946B45;
+      color: black;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.sumList {
+
+}
+
+.sumOrder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0px;
+  font-size: 14px;
+  font-family: Segoe UI;
+
+
+}
+
+.sumTitle {
+
+}
+
+.sumPrice {
+
+}
+
+.btnOrder {
+  background-color: #f24a41;
+  width: 100%;
+  color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.basketEmpty {
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  @media (max-width: 940px) {
+    min-height: 80px;
+
+  }
+}

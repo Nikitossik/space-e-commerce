@@ -1,0 +1,62 @@
+@import "../../index";
+
+.swiper {
+  min-width: 0;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  height: auto !important;
+  min-height: 100%;
+
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+.swiper-button-prev {
+ display: none;
+}
+
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+
+.swiper-vertical {
+  .swiper-wrapper {
+    flex-direction: column;
+  }
+}
+
+.swiper-autoheight {
+  .swiper-wrapper {
+    align-items: flex-start;
+  }
+}
+
+.swiper-initialized {
+  .swiper-slide {
+    flex-shrink: 0;
+    // transition-property: transform;
+  }
+}
+
+.swiper-android {
+  .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+

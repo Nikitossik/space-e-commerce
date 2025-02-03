@@ -1,0 +1,254 @@
+@import './../../index.scss';
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  &:hover {
+    .button {
+      opacity: 1;
+      cursor: pointer;
+      transform: scale(1);
+    }
+
+    .image {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
+
+.top {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  padding-bottom: 120%;
+  position: relative;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+
+  img {
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.title {
+  font-size: 14px;
+  color: #333;
+  //font-weight: 500;
+
+  line-height: 1.143em;
+  margin-bottom: 10px;
+  max-height: 3.429em;
+  overflow: hidden;
+  word-break: break-word;
+
+  @media (max-width: $mobile) {
+    padding: 0px 10px;
+  }
+}
+
+
+.statusBlock {
+  flex: 1 1 auto;
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 15px;
+  font-size: 13px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 0px;
+    padding: 0px 10px;
+  }
+}
+
+//.readyToDel{color: #42a852}
+//.inStock{color: #42a852}
+//.outOfStock{color: #e85c41}
+
+.bottom {
+
+  width: 100%;
+  position: relative;
+  flex: 1 0 45px;
+
+  @media (max-width: $mobile) {
+    flex: 1 0 65px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 10px 10px;
+  }
+}
+
+.prices {
+  font-family: Segoe UI;
+  height: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: start;
+
+  @media (max-width: $mobile) {
+
+    height: 35px;
+    flex: 0 0 35px;
+
+  }
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.priceOld {
+  font-size: 14px;
+  opacity: 0.75;
+  text-decoration: line-through;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  //z-index: 10;
+
+  span {
+    background-color: $lightSecondaryColor;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
+
+
+.button {
+  height: 45px;
+  //z-index: 10;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  //height: 100%;
+  opacity: 0;
+  cursor: none;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-color: #f24a41;
+  background-color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  //border: 1px solid #f24a41;
+
+  padding: 7px 16px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  transition: all 0.3s;
+
+  span {
+    padding-left: 32px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      background-image: url("./../../assets/image/icons/basket.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(0px, -50%);
+      filter: $whiteFilter;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $secondaryColor;
+      background-color: white;
+
+      span {
+        &:before {
+          filter: $yellowFilter;
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: $mobile) {
+    transform: scale(1);
+    cursor: pointer;
+    opacity: 1;
+    height: 30px;
+    flex: 0 0 30px;
+    position: relative;
+    top: 0;
+  }
+}
+
+.labelSale {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 4px 2px;
+  background: #fed700;
+  color: #333;
+  font-size: 12px;
+  line-height: 17px;
+  justify-content: center;
+  min-width: 80px;
+  text-shadow: 1px 1px 1px #b7b7b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile) {
+    min-width: 40px;
+  }
+
+}
+
+//.label {
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}

@@ -1,0 +1,55 @@
+.wrapper{
+  font-size: 14px;
+}
+.title{
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 15px 0px;
+}
+
+.description{
+  h2{
+    margin-bottom: 0.4em;
+    margin-top: 0.4em;
+    font-size: 1.4em;
+    font-weight: normal;
+    line-height: 1.12em;
+  }
+  h4{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  p{
+    margin-bottom: 8px;
+    line-height: 18px;
+  }
+  ul{
+    padding: 8px 0px;
+  }
+  li{
+    margin-bottom: 8px;
+    line-height: 16px;
+    padding: 0px 23px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0px;
+      width: 8px;
+      height: 8px;
+      background-image: url("./../../assets/image/icons/arrow.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translate(100%, 100%) rotate(90deg);
+    }
+
+    p:first-child {
+    }
+
+    p:nth-child(2) {
+      padding: 5px 5px 0px 25px;
+    }
+  }
+}

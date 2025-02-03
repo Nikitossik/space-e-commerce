@@ -1,0 +1,43 @@
+@import './../../index.scss';
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include adaptiveValue('margin-bottom', 50, 20, 1);
+}
+
+.title {
+  width: 100%;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 273px;
+  height: 173px;
+  position: relative;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.text {
+  width: 100%;
+  padding: 15px;
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  color: #666;
+  overflow: hidden;
+  p{
+    text-align: left;
+    padding: 8px 0px;
+  }
+}

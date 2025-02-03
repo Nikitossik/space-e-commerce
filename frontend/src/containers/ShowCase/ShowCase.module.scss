@@ -1,0 +1,112 @@
+@import "./../../index.scss";
+.wrapper {
+  margin-bottom: 50px;
+
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.title {
+  font-weight: 500;
+  letter-spacing: 1px;
+  @include adaptiveValue('font-size', 28, 16, 1);
+}
+
+.button{
+  position: relative;
+  background-color: #fedf00;
+  border: 1px solid $lightSecondaryColor;
+  color: #333;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 60px 12px 30px;
+  transition: all 0.3s;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    background-image: url("./../../assets/image/icons/arrow.png");
+    background-size: 14px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+  }
+  @media (any-hover: hover) {
+    &:hover{
+      background-color: $secondaryColor;
+      &:after{
+        transform: rotate(90deg) scale(1.15);
+      }
+    }
+  }
+
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-bottom: 15px;
+
+  @include adaptiveValue('gap', 25, 10 ,1 );
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+  }
+  @media (max-width: 850px) {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+
+  }
+}
+
+.itemList {
+  text-align: left;
+align-items: center;
+  justify-content: center;
+}
+
+.buttonMore{
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  background-color: white;
+  color: $secondaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.buttonAll{
+  font-size: 14px;
+  padding: 10px;
+  background-color: white;
+  color: $secondaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  span{
+    position: relative;
+    padding-right: 30px;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 6px;
+      width: 12px;
+      background-image: url("./../../assets/image/icons/arrow.png");
+      background-size: 12px 6px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(0px, -50%) rotate(90deg);
+      filter: $yellowFilter;
+    }
+  }
+}

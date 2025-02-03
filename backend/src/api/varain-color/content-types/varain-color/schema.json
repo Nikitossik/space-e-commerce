@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "varain_colors",
+  "info": {
+    "singularName": "varain-color",
+    "pluralName": "varain-colors",
+    "displayName": "varainColor"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "./../../../index.scss";
+.contactForm{
+  background-color: white;
+  border: 2px solid #FCB503FF;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  @include adaptiveValue('padding', 25, 15, 1);
+}
+
+.contactFormList{
+
+}
+.contactFormItem{
+  padding: 6px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  label{
+    span{
+      color: red;
+
+    }
+  }
+}
+.contactFormButton{
+  margin-top: 6px;
+  width: 100%;
+}
+
+.formTitle{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-weight: 700;
+  span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    &:before{
+      content: '1';
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #f24a41;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+  }
+
+}
+
+
